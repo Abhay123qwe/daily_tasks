@@ -11,7 +11,10 @@ class Achievements extends StatelessWidget {
     return Column(
       children: [
         Container(
-          color: eleven,
+          decoration: const BoxDecoration(
+              color: eleven,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20), topRight: Radius.circular(20))),
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             height: 210,

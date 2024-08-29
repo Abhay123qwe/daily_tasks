@@ -1,5 +1,6 @@
 import 'package:daily_tasks/utils/colors.dart';
 import 'package:daily_tasks/widgets/achievements.dart';
+import 'package:daily_tasks/widgets/top_task_board.dart';
 import 'package:flutter/material.dart';
 
 class Nextscreen extends StatefulWidget {
@@ -13,8 +14,21 @@ class _NextscreenState extends State<Nextscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        backgroundColor: const Color.fromARGB(255, 120, 118, 118),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: const Icon(
+          Icons.close,
+          color: sixth,
+        ),
+      ),
       body: SafeArea(
         child: Container(
+          padding: EdgeInsets.only(bottom: 10),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: const BoxDecoration(
@@ -82,7 +96,13 @@ class _NextscreenState extends State<Nextscreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: const Column(
-                    children: [Achievements()],
+                    children: [
+                      Achievements(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TopTaskBoard()
+                    ],
                   ),
                 )
               ],
