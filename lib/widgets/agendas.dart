@@ -75,7 +75,7 @@ class Agendas extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Stack(
