@@ -1,3 +1,5 @@
+import 'package:daily_tasks/responsive/mobile_screen.dart';
+
 import 'package:daily_tasks/utils/colors.dart';
 import 'package:daily_tasks/widgets/categories.dart';
 import 'package:daily_tasks/widgets/text_field_input.dart';
@@ -35,9 +37,24 @@ class _AddTasksState extends State<AddTasks> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'Add a Task',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Add a Task',
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const MobileScreen()));
+                      },
+                      icon: const Icon(
+                        Icons.check,
+                        size: 35,
+                        color: seventh,
+                      ))
+                ],
               ),
               const SizedBox(
                 height: 15,

@@ -28,7 +28,7 @@ class _NextscreenState extends State<Nextscreen> {
       ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.only(bottom: 10),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: const BoxDecoration(
