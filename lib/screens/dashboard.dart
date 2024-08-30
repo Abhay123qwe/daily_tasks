@@ -12,22 +12,28 @@ class Dashboard extends StatelessWidget {
       color: forth,
       padding: const EdgeInsets.only(left: 30),
       child: const SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Dashboard",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            DashbordTopOption(),
-            SizedBox(
-              height: 30,
-            ),
-            Agendas()
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Dashboard",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              DashbordTopOption(),
+              SizedBox(
+                height: 30,
+              ),
+              Agendas(),
+              SizedBox(
+                height: 10,
+              )
+            ],
+          ),
         ),
       ),
     );
